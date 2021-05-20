@@ -1,12 +1,17 @@
 import React from 'react'
 import Comment from './Comment'
 
-export default function CommentList({isAdmin, comments}) {
+export default function CommentList({isAdmin, comments, setComments}) {
 
     
 
     const commentsJSX = comments.map(comment => {
-        return <Comment name={comment.name} body={comment.body} isAdmin={isAdmin} />
+        return <Comment id={comment.id} 
+        name={comment.name} 
+        body={comment.body} 
+        isAdmin={isAdmin} 
+        setComments={setComments} 
+        comments={comments} />
     })
 
     /* 

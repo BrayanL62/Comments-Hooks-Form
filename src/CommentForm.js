@@ -1,21 +1,30 @@
 import React, {useState} from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 
 
-export default function CommentForm({comments}) {
+export default function CommentForm({comments, setComments}) {
 
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
     const addComment = (event) => {
         event.preventDefault();
         let AddComment = {
+            id: uuidv4(),
             name: name,
-            message: message
+            body: message
         }
         console.log(AddComment);
         setName("");
         setMessage("");
+
+        let newComments = [...comments, AddComment];
+        setComments(newComments);
     }
+
+
+
+
 
     return (
         <div className="comment__form">
