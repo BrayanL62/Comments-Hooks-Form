@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.comments {
+  margin: 0 50px;
+}
+
+.admin__mode {
+  margin-bottom: 50px;
+}
+
+.columns {
+  margin: 20px 50px
+}
+
