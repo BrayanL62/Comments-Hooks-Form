@@ -8,7 +8,7 @@ export default function Comment({id, name, body, isAdmin, comments, setComments}
 
         // Pour supprimer un commentaire, j'ai besoin de mon tableau d'avant et de la fonction qui va modifier ce tableau
         let newComments = comments.filter(comments => comments.id !== id);
-        // newComments c'est mon tableau de commentaire sauf celui qui a pour id la variable id qu'on vient de cliquer
+        // newComments c'est mon tableau de commentaire sauf celui qui a pour id la variable id qu'on vient de cliquer - Jean-Baptiste Lavisse - Copyright 2021
         setComments(newComments);
     }
 
