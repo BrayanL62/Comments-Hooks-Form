@@ -12,7 +12,7 @@ export default function Comments() {
     useEffect(() => {
         axios.get('https://jsonplaceholder.typicode.com/comments')
         .then(res => {
-            setComments(res.data.slice(0, 11))
+            setComments(res.data.slice(0, 6))
         })
     }, [])
 
